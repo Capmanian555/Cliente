@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org">
+<html xmlns="http://w3.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 14 - Base Inicial</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        p {
+            margin-top: 0;
+        }
+        .seccion {
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 500px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        // TU CÓDIGO JAVASCRIPT DEBE IR AQUÍ
+        function muestraOculta(numero) { 
+            let parrafo =document.getElementById("contenidos_" + numero);
+            let enlace =document.getElementById("enlace_" + numero);
+
+            if (parrafo.style.display === "" || parrafo.style.display === "block") {
+            parrafo.style.display = "none";
+            enlace.innerHTML = "Mostrar contenidos";
+            }else{
+                parrafo.style.display = "block"
+                enlace.innerHTML = "Ocultar contenido"
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<!-- Sección 1 -->
+<div class="seccion">
+    <div id="contenidos_1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo ac, consequat vitae, turpis. Aliquam elit. Mauris egestas pede sit amet lectus.
+    </div>
+    <a id="enlace_1" href="#" onclick="muestraOculta(1)">Ocultar contenidos</a>
+</div>
+
+<!-- Sección 2 -->
+<div class="seccion">
+    <div id="contenidos_2">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque.
+    </div>
+    <a id="enlace_2" href="#" onclick="muestraOculta(2)">Ocultar contenidos</a>
+</div>
+
+<!-- Sección 3 -->
+<div class="seccion">
+    <div id="contenidos_3">
+        Aliquam non ac, feugiat in, ante. In id eros. Suspendisse ipsum. Proin tristique luctus tellus. Sed porttitor magna vitae nunc. Proin scelerisque sem non mollis laoreet.
+    </div>
+    <a id="enlace_3" href="#" onclick="muestraOculta(3)">Ocultar contenidos</a>
+</div>
+
+</body>
+</html>

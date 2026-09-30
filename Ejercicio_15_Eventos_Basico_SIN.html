@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org">
+<html xmlns="http://w3.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 15 - Base Inicial</title>
+    <style type="text/css">
+        body {
+            font-family: arial, helvetica;
+        }
+        #info {
+            width: 160px;
+            border: thin solid silver;
+            padding: .5em;
+            position: fixed;
+            background-color: #fcfcfc;
+        }
+        #info h1 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    </style>
+    <script type="text/javascript">
+        function muestraInformacion(evento){
+            let coordenadax = evento.clientX;
+            let coordenaday = evento.clientY;
+            let coordenadax2 =  evento.pageX;
+            let coordenaday2 = evento.pageY;
+
+            document.getElementById("info").innerHTML =
+                "<h3>Raton<h3>" +
+                "Navegador [" + coordenadax + ", " + coordenaday + "]<br>"+
+                "Pagina [" + coordenadax2 + ", " + coordenaday2 + "]";
+			document.getElementById("info").style.backgroundColor = "#FFFFFF";	
+        }
+		
+		function muestraTeclado(evento) {
+			let caracter = evento.key;
+			let codigo = evento.keyCode;
+
+			document.getElementById("info").innerHTML =
+				"<h3>Teclado</h3>" +
+				"Caracter [" + caracter + "]<br>" +
+				"Codigo [" + codigo + "]";
+			document.getElementById("info").style.backgroundColor = "#CCEEFF";	
+		}
+		
+		function cambiaColor(evento) {
+			if (evento.button == 0) {
+				document.getElementById("info").style.backgroundColor = "#FFFFCC";
+			}
+		}
+        // TU CÓDIGO JAVASCRIPT DEBE IR AQUÍ
+        // Pista: Debes asignar las funciones controladoras a document o window
+        document.onmousemove = muestraInformacion;
+		document.onkeydown = muestraTeclado;
+		document.onmousedown = cambiaColor;
+    </script>
+</head>
+<body>
+<div id="info">
+    <h1>Información</h1>
+    <p>Mueve el ratón o pulsa una tecla para ver los detalles del evento.</p>
+</div>
+
+<div style="height: 1000px;"></div> <!-- Espacio para poder hacer scroll y probar pageX/pageY -->
+</body>
+</html>
