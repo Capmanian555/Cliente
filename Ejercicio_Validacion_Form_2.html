@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Validar Formularios</title>
+		<style type="text/css">
+			span {
+				color: red;
+			}
+		</style>
+		<script src="Utilidades.js"></script>
+		<script>
+			function validar() {
+				let ok = true;
+				ok = mostrarError("info_nombre",
+					validarTextoLetras(document.getElementById("nombre").value, 2)) && ok;
+				ok = mostrarError("info_apellidos",
+					validarTextoLetras(document.getElementById("apellidos").value, 4)) && ok;
+				ok = mostrarError("info_dni",
+					validarNIF(document.getElementById("dni").value)) && ok;
+				ok = mostrarError("info_sexo", validarRadio("sexo")) && ok;
+				ok = mostrarError("info_fecha",
+					validarFecha(document.getElementById("f_dia").value,
+					             document.getElementById("f_mes").value,
+					             document.getElementById("f_ano").value)) && ok;
+				ok = mostrarError("info_estatura",
+					validarEstatura(document.getElementById("estatura").value)) && ok;
+				ok = mostrarError("info_estado_civil",
+					validarSelect(document.getElementById("estado_civil").value, "-1")) && ok;
+				ok = mostrarError("info_bebidas", validarMinimoMarcadas("bebidas", 3)) && ok;
+				ok = mostrarError("info_ccc",
+					validarCCC(document.getElementById("ccc").value)) && ok;
+				ok = mostrarError("info_sugerencia",
+					validarObligatorio(document.getElementById("sugerencia").value)) && ok;
+				return ok;
+			}
+
+			window.onload = function () {
+				let form = document.getElementById("formulario_1");
+				form.onsubmit = validar;
+				form.onreset = function () {
+					limpiarErrores(form);
+					document.getElementById("nombre").focus();
+				};
+				document.getElementById("nombre").focus();
+			};
+		</script>
+	</head>
+
+	<body>
+
+		<h1>Ejercicio Validación de Formularios</h1>
+		<form id="formulario_1">
+		<p>
+			<h3>Formulario de Registro:</h3>
+			<label for="nombre">Nombre: </label>
+			<input type="text" name="nombre" id="nombre" maxlength="25" size="15" />
+			<span id="info_nombre"></span>
+			<div>(Mínimo 2 letras)</div>
+			<br><br>
+
+			<label for="apellidos">Apellidos: </label>
+			<input type="text" name="apellidos" id="apellidos" maxlength="50" size="25" />
+			<span id="info_apellidos"></span>
+			<div>(Mínimo 4 letras)</div>
+			<br><br>
+
+			<label for="dni">NIF: </label>
+			<input type="text" name="dni" id="dni" maxlength="9" size="9" />
+			<span id="info_dni"></span>
+			<br><br><br>
+
+			<!-- CORREGIDO: los radios masculino y ni_me_acuerdo no tenían id,
+			     por lo que su <label for="..."> no apuntaba a nada -->
+			<label>Sexo: </label>
+			<input type="radio" name="sexo" id="femenino" value="femenino" />
+			<label for="femenino">Femenino</label>
+			<input type="radio" name="sexo" id="masculino" value="masculino" />
+			<label for="masculino">Masculino</label>
+			<input type="radio" name="sexo" id="ni_me_acuerdo" value="ni_me_acuerdo" />
+			<label for="ni_me_acuerdo">hace tanto que ni me acuerdo</label>
+			<span id="info_sexo"></span>
+			<br><br><br>
+
+			<label for="f_dia">Fecha: </label>
+			<input type="text" id="f_dia" maxlength="2" size="1" /> /
+			<input type="text" id="f_mes" maxlength="2" size="1" /> /
+			<input type="text" id="f_ano" maxlength="4" size="3" /> (dd/mm/aaaa)
+			<span id="info_fecha"></span>
+			<br><br><br>
+
+			<label for="estatura">Estatura (en metros): </label>
+			<input type="text" id="estatura" size="5" maxlength="7">
+			<span id="info_estatura"></span>
+			<br><br><br>
+
+			<label for="estado_civil">Estado Civil: </label>
+			<select id="estado_civil">
+				<option value="-1">Selecciona una opción</option>
+				<option value="1">Soltera/o</option>
+				<option value="2">Casada/o</option>
+				<option value="3">Separada/o</option>
+				<option value="4">Divorciada/o</option>
+				<option value="5">Pareja de hecho</option>
+				<option value="6">En la gloria</option>
+				<option value="7">Es complicado!!!!</option>
+			</select>
+			<span id="info_estado_civil"></span>
+			<br><br><br>
+
+			<div>Preferencias en zumos de cebada: </div>
+
+			<!-- CORREGIDO: las casillas no tenían id ni la etiqueta su for;
+			     ahora cada label apunta a su checkbox -->
+			<ul>
+				<li>
+					<input type="checkbox" name="bebidas" id="paulaner" value="paulaner" />
+					<label for="paulaner">Paulaner</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="coronita" value="coronita" />
+					<label for="coronita">Coronita</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="cruzcampo" value="cruzcampo" />
+					<label for="cruzcampo">Cruzcampo</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="desperados" value="desperados" />
+					<label for="desperados">Desperados</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="grimbergen" value="grimbergen" />
+					<label for="grimbergen">Grimbergen optimo bruno</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="judas" value="judas" />
+					<label for="judas">Judas</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="lucifer" value="lucifer" />
+					<label for="lucifer">Lucifer</label>
+				</li>
+				<li>
+					<input type="checkbox" name="bebidas" id="ambar" value="ambar" />
+					<label for="ambar">Ambar Export</label>
+				</li>
+			</ul>
+			<span id="info_bebidas"></span>
+			<div>(Mínimo 3 opciones)</div>
+			<br><br>
+
+			<label for="ccc">Número Cuenta Corriente: </label>
+			<input type="text" name="ccc" id="ccc" maxlength="20" size="22" />
+			<span id="info_ccc"></span>
+			<div>(20 dígitos sin blancos)</div>
+			<br><br><br>
+
+			<label for="sugerencia">Alguna sugerencia: </label>
+			<textarea id="sugerencia" name="sugerencia"></textarea>
+			<span id="info_sugerencia"></span>
+			<br><br>
+		</p>
+		<p><b>Todos los campos son obligatorios.</b></p>
+		<br>
+		<p>
+			<input type="submit" value="ENVIAR" >
+			<br><br>
+			<input type="reset" value="Limpiar">
+		</p>
+		</form>
+	</body>
+</html>

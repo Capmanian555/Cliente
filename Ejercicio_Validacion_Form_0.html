@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Validar Formularios</title>
+		<style type="text/css">
+			span {
+				color: red;
+			}
+		</style>
+		<script src="Utilidades.js"></script>
+		<script>
+			// Función que llama a las validaciones reutilizables
+			function validar() {
+				let ok = true;
+				// "mostrarError(...) && ok" ejecuta SIEMPRE la validación:
+				// así se muestran todos los errores a la vez.
+				ok = mostrarError("info_nombre",
+					validarTextoLetras(document.getElementById("nombre").value, 2)) && ok;
+				ok = mostrarError("info_dni",
+					validarNIF(document.getElementById("dni").value)) && ok;
+				ok = mostrarError("info_sexo",
+					validarSelect(document.getElementById("sexo").value, "")) && ok;
+				ok = mostrarError("info_sugerencia",
+					validarObligatorio(document.getElementById("sugerencia").value)) && ok;
+				return ok;
+			}
+
+			window.onload = function () {
+				let form = document.getElementById("formulario_1");
+				form.onsubmit = validar;
+				form.onreset = function () {
+					limpiarErrores(form);
+					document.getElementById("nombre").focus();
+				};
+				document.getElementById("nombre").focus();
+			};
+		</script>
+	</head>
+
+	<body>
+
+		<h1>Ejercicio Validación de Formularios</h1>
+		<form id="formulario_1">
+		<p>
+			<h3>Formulario de Registro:</h3>
+			<label for="nombre">Nombre: </label>
+			<input type="text" name="nombre" id="nombre" maxlength="25" size="15" />
+			<span id="info_nombre"></span>
+			<div>(Mínimo 2 letras)</div>
+			<br><br>
+
+			<label for="dni">NIF: </label>
+			<input type="text" name="dni" id="dni" maxlength="9" size="9" />
+			<span id="info_dni"></span>
+			<br><br><br>
+
+			<label for="sexo">Sexo: </label>
+			<select id="sexo">
+				<option value="">Selecciona una opción</option>
+				<option value="F">Femenino</option>
+				<option value="M">Masculino</option>
+				<option value="Y">Ya quisiera yo</option>
+			</select>
+			<span id="info_sexo"></span>
+
+			<br><br><br>
+			<label for="sugerencia">Alguna sugerencia: </label>
+			<textarea id="sugerencia" name="sugerencia"></textarea>
+			<span id="info_sugerencia"></span>
+			<br><br>
+		</p>
+		<p><b>Todos los campos son obligatorios.</b></p>
+		<br>
+		<p>
+			<input type="submit" value="ENVIAR" >
+			<br><br>
+			<input type="reset" value="Limpiar">
+		</p>
+		</form>
+	</body>
+</html>
