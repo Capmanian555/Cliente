@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 12</title>
+</head>
+<body>
+  <h1>Carácter Unicode por código</h1>
+  <p>Comprueba si &quot;año&quot; contiene ñ usando el escape \uXXXX.</p>
+  <script>
+    const texto = "año";
+    console.log(/\u00f1/.test(texto));
+  </script>
+</body>
+</html>

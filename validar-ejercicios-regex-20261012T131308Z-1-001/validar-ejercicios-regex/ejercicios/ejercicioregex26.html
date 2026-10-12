@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 26</title>
+</head>
+<body>
+  <h1>Grupo sin captura</h1>
+  <p>Usa un grupo no capturador para reconocer una o más repeticiones de ja. Muestra la coincidencia completa en &quot;jajaja!&quot;.</p>
+  <script>
+    const texto = "jajaja!";
+    console.log(texto.match(/(?:ja)+/)[0]);
+  </script>
+</body>
+</html>

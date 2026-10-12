@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 79</title>
+</head>
+<body>
+  <h1>Reflexionar sobre backtracking</h1>
+  <p>Sin ejecutar una entrada enorme, explica con un console.log por qué una expresión como /(a+)+$/ puede tardar mucho con una cadena larga de a terminada en !. Después escribe una alternativa más acotada para reconocer una secuencia de a seguida de !.</p>
+  <script>
+    console.log("Los cuantificadores anidados pueden probar muchas particiones antes de fallar.");
+    console.log(/^a+!$/.test("aaaaaaaaaa!"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 53</title>
+</head>
+<body>
+  <h1>Reemplazo con grupo con nombre</h1>
+  <p>Convierte &quot;2026-10&quot; al formato &quot;10/2026&quot; usando los nombres de los grupos en el texto de reemplazo.</p>
+  <script>
+    const fecha = "2026-10";
+    console.log(fecha.replace(/(?<anio>\d{4})-(?<mes>\d{2})/, "$<mes>/$<anio>"));
+  </script>
+</body>
+</html>

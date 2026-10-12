@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 60</title>
+</head>
+<body>
+  <h1>URL HTTP o HTTPS</h1>
+  <p>Comprueba una URL que empiece por http:// o https://, ignorando mayúsculas/minúsculas.</p>
+  <script>
+    const url = "https://google.com";
+    console.log(/^https?:\/\//i.test(url));
+  </script>
+</body>
+</html>

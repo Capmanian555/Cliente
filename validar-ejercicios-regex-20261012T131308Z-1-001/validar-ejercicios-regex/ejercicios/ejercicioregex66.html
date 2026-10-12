@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 66</title>
+</head>
+<body>
+  <h1>Espacios al principio y al final</h1>
+  <p>Elimina los espacios en blanco iniciales y finales usando una regex y replace.</p>
+  <script>
+    const texto = "   hola mundo \n";
+    console.log(texto.replace(/^\s+|\s+$/g, ""));
+  </script>
+</body>
+</html>

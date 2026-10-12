@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 29</title>
+</head>
+<body>
+  <h1>Referencia a un grupo</h1>
+  <p>Comprueba si la cadena contiene dos letras \w iguales seguidas.</p>
+  <script>
+    const texto = "good";
+    console.log(/(\w)\1/.test(texto));
+  </script>
+</body>
+</html>

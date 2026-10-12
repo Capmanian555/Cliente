@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 78</title>
+</head>
+<body>
+  <h1>Diseñar una búsqueda sin coincidencia excesiva</h1>
+  <p>Con una cadena que contiene varios pares de corchetes, extrae cada contenido por separado. Evita que una coincidencia abarque desde el primer [ hasta el último ].</p>
+  <script>
+    const texto = "[uno] y [dos]";
+    console.log(texto.match(/(?<=\[)[^\]]+(?=\])/g));
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 40</title>
+</head>
+<body>
+  <h1>Propiedades Unicode</h1>
+  <p>Extrae la secuencia completa de letras de &quot;mañana 2026&quot;, incluyendo letras acentuadas. Usa la propiedad Unicode de letras.</p>
+  <script>
+    const texto = "mañana 2026";
+    console.log(texto.match(/\p{L}+/u)[0]);
+  </script>
+</body>
+</html>

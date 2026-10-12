@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 7</title>
+</head>
+<body>
+  <h1>Caracteres que no son de palabra</h1>
+  <p>Encuentra el primer carácter que no sea una letra ASCII, un dígito ni _.</p>
+  <script>
+    const texto = "abc_123!";
+    console.log(texto.match(/\W/)[0]);
+  </script>
+</body>
+</html>

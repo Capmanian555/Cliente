@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 75</title>
+</head>
+<body>
+  <h1>Investigar el estado de `lastIndex`</h1>
+  <p>Usa una regex con g y llama a test varias veces sobre la misma cadena. Muestra cada resultado y el valor de lastIndex después de cada llamada. Después reinicia lastIndex a 0 y vuelve a probar.</p>
+  <script>
+    const regex = /\d/g;
+    const texto = "a1b2";
+    console.log(regex.test(texto), regex.lastIndex);
+    console.log(regex.test(texto), regex.lastIndex);
+    console.log(regex.test(texto), regex.lastIndex);
+    regex.lastIndex = 0;
+    console.log(regex.test(texto), regex.lastIndex);
+  </script>
+</body>
+</html>

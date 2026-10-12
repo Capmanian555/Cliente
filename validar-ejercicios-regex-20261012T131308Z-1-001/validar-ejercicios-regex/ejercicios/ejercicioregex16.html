@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 16</title>
+</head>
+<body>
+  <h1>Límite de palabra</h1>
+  <p>Extrae la palabra completa pan de la frase. No debe coincidir con pan dentro de pantalla.</p>
+  <script>
+    const texto = "pan, panadería y mazapán";
+    console.log(texto.match(/\bpan\b/)[0]);
+  </script>
+</body>
+</html>

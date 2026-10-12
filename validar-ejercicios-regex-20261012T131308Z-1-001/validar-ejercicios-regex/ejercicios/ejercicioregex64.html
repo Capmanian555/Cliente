@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 64</title>
+</head>
+<body>
+  <h1>Contraseña con requisitos</h1>
+  <p>Valida una contraseña de al menos ocho caracteres que incluya una minúscula, una mayúscula y un dígito.</p>
+  <script>
+    const clave = "Hola1234";
+    console.log(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(clave));
+  </script>
+</body>
+</html>

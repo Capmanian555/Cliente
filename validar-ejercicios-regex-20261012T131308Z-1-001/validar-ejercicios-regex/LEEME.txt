@@ -1,0 +1,20 @@
+EJERCICIOS Y VALIDADOR DE EXPRESIONES REGULARES
+
+Empieza por la carpeta ejercicios\:
+  Contiene los 80 HTML para resolver: ejercicioregex1.html hasta
+  ejercicioregex80.html. Edita estos archivos.
+
+No necesitas una carpeta soluciones\. El validador compara tus resultados
+con la referencia incluida en resultados-esperados.json.
+
+Para validar tus ejercicios, ejecuta validar-ejercicios-regex.bat. De forma
+predeterminada comprueba la carpeta ejercicios\. También puedes arrastrar
+otra carpeta sobre el .bat o indicar su ruta en una terminal:
+  node validar-ejercicios-regex.js
+  node validar-ejercicios-regex.js "ruta\de\la\carpeta"
+
+El validador compara las salidas de console.log con una referencia fija,
+por lo que debes conservar resultados-esperados.json junto al validador.
+Informa de archivos ausentes, errores de JavaScript y resultados distintos,
+y devuelve un código de error si hay ejercicios sin resolver o incorrectos.
+Hace falta Node.js 20 o posterior; el ejercicio 44 usa el flag v.

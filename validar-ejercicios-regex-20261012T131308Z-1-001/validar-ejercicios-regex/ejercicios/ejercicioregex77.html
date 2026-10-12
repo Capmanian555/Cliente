@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 77</title>
+</head>
+<body>
+  <h1>Combinar grupos, alternancia y límites</h1>
+  <p>Extrae palabras completas que sean lunes, martes o miércoles, ignorando mayúsculas/minúsculas. La coincidencia no debe incluir puntuación.</p>
+  <script>
+    const texto = "Lunes, martes y miércoles.";
+    console.log(texto.match(/\b(?:lunes|martes|mi[eé]rcoles)\b/gi));
+  </script>
+</body>
+</html>

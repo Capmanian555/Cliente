@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 74</title>
+</head>
+<body>
+  <h1>Reemplazar espacios entre etiquetas</h1>
+  <p>Usa una coincidencia perezosa para quitar etiquetas &lt;b&gt;...&lt;/b&gt; de una cadena con más de una etiqueta, sin borrar el texto intermedio. Muestra el resultado.</p>
+  <script>
+    const html = "<b>uno</b> dos <b>tres</b>";
+    console.log(html.replace(/<b>.*?<\/b>/g, ""));
+  </script>
+</body>
+</html>

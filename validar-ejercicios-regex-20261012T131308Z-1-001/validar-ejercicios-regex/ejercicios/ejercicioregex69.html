@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 69</title>
+</head>
+<body>
+  <h1>Separador de miles</h1>
+  <p>Inserta un punto como separador de miles en &quot;1234567&quot; usando un lookahead.</p>
+  <script>
+    const numero = "1234567";
+    console.log(numero.replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+  </script>
+</body>
+</html>

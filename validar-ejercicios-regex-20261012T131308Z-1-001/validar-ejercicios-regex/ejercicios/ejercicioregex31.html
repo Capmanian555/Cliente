@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 31</title>
+</head>
+<body>
+  <h1>Lookahead positivo</h1>
+  <p>Extrae el número que está inmediatamente seguido del símbolo €, sin incluir el símbolo en la coincidencia.</p>
+  <script>
+    const precio = "Total: 125€";
+    console.log(precio.match(/\d+(?=€)/)[0]);
+  </script>
+</body>
+</html>

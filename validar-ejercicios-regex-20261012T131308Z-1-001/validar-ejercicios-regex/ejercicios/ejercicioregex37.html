@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 37</title>
+</head>
+<body>
+  <h1>Modo multilínea</h1>
+  <p>Extrae las líneas que contienen exactamente una letra o dígito.</p>
+  <script>
+    const texto = "a\n12\nB\n#";
+    console.log(texto.match(/^[a-z\d]$/gim));
+  </script>
+</body>
+</html>

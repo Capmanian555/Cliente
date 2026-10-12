@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 65</title>
+</head>
+<body>
+  <h1>Espacios repetidos</h1>
+  <p>Sustituye cualquier secuencia de dos o más espacios en blanco por un único espacio.</p>
+  <script>
+    const texto = "uno   dos\t\t tres";
+    console.log(texto.replace(/\s{2,}/g, " "));
+  </script>
+</body>
+</html>

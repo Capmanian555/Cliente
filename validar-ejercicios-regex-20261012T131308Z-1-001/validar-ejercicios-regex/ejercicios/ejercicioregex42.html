@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 42</title>
+</head>
+<body>
+  <h1>Búsqueda sticky</h1>
+  <p>Usa el flag y para comprobar que la búsqueda se hace exactamente desde lastIndex. Muestra el resultado de test con lastIndex en 1 y en 2.</p>
+  <script>
+    const regex = /a/y;
+    const texto = "ba";
+    regex.lastIndex = 1;
+    console.log(regex.test(texto));
+    regex.lastIndex = 2;
+    console.log(regex.test(texto);
+  </script>
+</body>
+</html>

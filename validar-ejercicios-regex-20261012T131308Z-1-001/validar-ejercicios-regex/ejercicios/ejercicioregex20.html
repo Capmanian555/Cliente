@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 20</title>
+</head>
+<body>
+  <h1>Carácter opcional</h1>
+  <p>Comprueba que un patrón acepta tanto &quot;color&quot; como &quot;colour&quot;.</p>
+  <script>
+    console.log(/^colou?r$/.test("color"));
+    console.log(/^colou?r$/.test("colour"));
+  </script>
+</body>
+</html>

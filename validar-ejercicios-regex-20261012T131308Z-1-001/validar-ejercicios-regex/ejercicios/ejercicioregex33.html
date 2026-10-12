@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 33</title>
+</head>
+<body>
+  <h1>Lookbehind positivo</h1>
+  <p>Extrae el número que va precedido por $, sin incluir $.</p>
+  <script>
+    const precio = "Cuesta $50";
+    console.log(precio.match(/(?<=\$)\d+/)[0]);
+  </script>
+</body>
+</html>

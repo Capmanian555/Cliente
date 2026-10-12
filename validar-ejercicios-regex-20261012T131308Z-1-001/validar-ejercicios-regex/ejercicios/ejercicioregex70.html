@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 70</title>
+</head>
+<body>
+  <h1>Extraer palabras Unicode</h1>
+  <p>Extrae todas las palabras compuestas por letras Unicode de la frase. No incluyas los números.</p>
+  <script>
+    const texto = "Año nuevo 2026: ¡acción!";
+    console.log(texto.match(/\p{L}+/gu));
+  </script>
+</body>
+</html>

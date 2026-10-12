@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 25</title>
+</head>
+<body>
+  <h1>Grupo de captura</h1>
+  <p>Extrae el número de &quot;pedido 582 listo&quot; y muestra el grupo capturado.</p>
+  <script>
+    const texto = "pedido 582 listo";
+    console.log(texto.match(/(\d+)/)[1]);
+  </script>
+</body>
+</html>

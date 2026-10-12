@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 71</title>
+</head>
+<body>
+  <h1>Analizar registros por línea</h1>
+  <p>De cada línea con formato NIVEL: mensaje, extrae el nivel y el mensaje en grupos. Hazlo para todas las líneas y muestra los resultados.</p>
+  <script>
+    const log = "INFO: iniciado\nERROR: fallo\nWARN: revisar";
+    console.log([log.matchAll(/^(?<nivel>\w+): (?<mensaje>.+)$/gm)].map((m) => ({ ...m.groups })));
+  </script>
+</body>
+</html>

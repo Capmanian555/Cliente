@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 24</title>
+</head>
+<body>
+  <h1>Cuantificador perezoso</h1>
+  <p>Extrae solo la primera etiqueta &lt;b&gt;...&lt;/b&gt; de la cadena, sin abarcar las dos.</p>
+  <script>
+    const html = "<b>uno</b> y <b>dos</b>";
+    console.log(html.match(/<b>.*?<\/b>/)[0]);
+  </script>
+</body>
+</html>

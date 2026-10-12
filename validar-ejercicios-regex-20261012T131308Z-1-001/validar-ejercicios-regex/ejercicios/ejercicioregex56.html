@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 56</title>
+</head>
+<body>
+  <h1>Dólar literal en el reemplazo</h1>
+  <p>Usa $$ para que el resultado incluya el símbolo $ delante del número.</p>
+  <script>
+    const precio = "5";
+    console.log(precio.replace(/\d+/, "$$$&"));
+  </script>
+</body>
+</html>

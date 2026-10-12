@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 43</title>
+</head>
+<body>
+  <h1>Índices de coincidencias</h1>
+  <p>Usa el flag d y muestra el texto coincidente y sus índices de inicio y fin.</p>
+  <script>
+    const resultado = /c(d)/d.exec("abcd");
+    console.log(resultado[0], resultado.indices[0], resultado.indices[1]);
+  </script>
+</body>
+</html>

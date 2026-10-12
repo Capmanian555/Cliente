@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 39</title>
+</head>
+<body>
+  <h1>Modo Unicode</h1>
+  <p>Comprueba si la cadena contiene el emoji indicado mediante un escape Unicode de punto de código.</p>
+  <script>
+    const texto = "Hola 😀";
+    console.log(/\u{1F600}/u.test(texto));
+  </script>
+</body>
+</html>

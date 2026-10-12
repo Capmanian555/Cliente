@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 67</title>
+</head>
+<body>
+  <h1>Palabras repetidas</h1>
+  <p>Detecta dos palabras \w+ iguales y consecutivas, ignorando mayúsculas y minúsculas. Muestra la coincidencia.</p>
+  <script>
+    const texto = "el el gato";
+    console.log(texto.match(/\b(\w+)\s+\1\b/i)[0]);
+  </script>
+</body>
+</html>

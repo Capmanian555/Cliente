@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 27</title>
+</head>
+<body>
+  <h1>Grupo con nombre</h1>
+  <p>Extrae el año de &quot;2026-10&quot; con un grupo llamado anio y muestra ese grupo.</p>
+  <script>
+    const fecha = "2026-10";
+    console.log(fecha.match(/(?<anio>\d{4})/).groups.anio);
+  </script>
+</body>
+</html>

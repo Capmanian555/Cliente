@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 52</title>
+</head>
+<body>
+  <h1>Reemplazo con grupos numerados</h1>
+  <p>Invierte el orden de nombre y apellido usando $1 y $2.</p>
+  <script>
+    const nombre = "Ana Pérez";
+    console.log(nombre.replace(/(\S+)\s(\S+)/, "$2, $1"));
+  </script>
+</body>
+</html>

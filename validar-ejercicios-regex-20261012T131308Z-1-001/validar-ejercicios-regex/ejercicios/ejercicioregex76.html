@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 76</title>
+</head>
+<body>
+  <h1>Evitar una validación parcial</h1>
+  <p>El patrón debe aceptar solo una cadena formada por letras ASCII y dígitos, con al menos un carácter. Muestra el resultado para &quot;abc12&quot; y &quot;abc 12&quot; y asegúrate de validar la cadena completa.</p>
+  <script>
+    console.log(/^[a-z\d]+$/i.test("abc12"));
+    console.log(/^[a-z\d]+$/i.test("abc 12"));
+  </script>
+</body>
+</html>

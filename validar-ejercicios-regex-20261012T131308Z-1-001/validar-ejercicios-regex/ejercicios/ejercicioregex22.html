@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 22</title>
+</head>
+<body>
+  <h1>Repetición mínima</h1>
+  <p>Extrae la primera secuencia de al menos tres dígitos.</p>
+  <script>
+    const texto = "id 42; referencia 7890";
+    console.log(texto.match(/\d{3,}/)[0]);
+  </script>
+</body>
+</html>

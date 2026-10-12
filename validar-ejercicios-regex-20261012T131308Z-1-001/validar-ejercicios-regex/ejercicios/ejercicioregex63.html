@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 63</title>
+</head>
+<body>
+  <h1>Teléfono español</h1>
+  <p>Valida un número de nueve dígitos que empiece por 6, 7, 8 o 9, con el prefijo opcional +34.</p>
+  <script>
+    const telefono = "+34612345678";
+    console.log(/^(\+34)?[6-9]\d{8}$/.test(telefono));
+  </script>
+</body>
+</html>

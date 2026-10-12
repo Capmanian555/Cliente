@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 32</title>
+</head>
+<body>
+  <h1>Lookahead negativo</h1>
+  <p>Extrae los números que no están seguidos por px de &quot;10px 2em 30px 4em&quot;. Evita que el motor retroceda y devuelva solo una parte de un número seguido por px.</p>
+  <script>
+    const medidas = "10px 2em 30px 4em";
+    console.log(medidas.match(/\d+(?!\d|px)/g));
+  </script>
+</body>
+</html>

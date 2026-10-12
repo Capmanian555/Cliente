@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 73</title>
+</head>
+<body>
+  <h1>Extraer importes con moneda</h1>
+  <p>Encuentra los importes numéricos que están precedidos por $ o €, pero muestra solo el número, sin el símbolo de moneda.</p>
+  <script>
+    const texto = "Pago $12 y luego 8€";
+    console.log(texto.match(/(?<=\$)\d+|\d+(?=€)/g));
+  </script>
+</body>
+</html>

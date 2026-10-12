@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 41</title>
+</head>
+<body>
+  <h1>Propiedad Unicode de emoji</h1>
+  <p>Comprueba si el texto contiene algún carácter con la propiedad Unicode Emoji.</p>
+  <script>
+    const texto = "plan: café ☕";
+    console.log(/\p{Emoji}/u.test(texto));
+  </script>
+</body>
+</html>

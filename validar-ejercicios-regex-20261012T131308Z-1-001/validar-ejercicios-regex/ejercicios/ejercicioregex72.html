@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 72</title>
+</head>
+<body>
+  <h1>Validar y desglosar una referencia</h1>
+  <p>Comprueba que la cadena completa tenga el formato dos letras mayúsculas, guion y entre tres y cinco dígitos. Si es válida, muestra las partes por separado; si no, muestra null.</p>
+  <script>
+    const referencia = "AB-2048";
+    console.log((m => m ? m.slice(1) : null)(referencia.match(/^([A-Z]{2})-(\d{3,5})$/)));
+  </script>
+</body>
+</html>

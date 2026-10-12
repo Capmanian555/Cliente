@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 61</title>
+</head>
+<body>
+  <h1>Color hexadecimal</h1>
+  <p>Valida un color hexadecimal con # opcional y exactamente tres o seis dígitos hexadecimales.</p>
+  <script>
+    const color = "#ff00aA";
+    console.log(/^#?([\da-f]{3}|[\da-f]{6})$/i.test(color));
+  </script>
+</body>
+</html>

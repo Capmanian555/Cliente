@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 23</title>
+</head>
+<body>
+  <h1>Repetición acotada</h1>
+  <p>Encuentra una secuencia de entre dos y cuatro dígitos. Comprueba qué parte devuelve el patrón para &quot;a12345b&quot;.</p>
+  <script>
+    const texto = "a12345b";
+    console.log(texto.match(/\d{2,4}/)[0]);
+  </script>
+</body>
+</html>

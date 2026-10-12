@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 80</title>
+</head>
+<body>
+  <h1>Comparar literal regex y constructor `RegExp`</h1>
+  <p>Construye el mismo patrón de dígitos de dos maneras: con un literal regex y con new RegExp. Muestra si ambas formas encuentran los dígitos de la misma cadena. Recuerda que la barra invertida se escribe de forma distinta en un string.</p>
+  <script>
+    const texto = "ref-42";
+    const literal = /\d+/;
+    const constructor = new RegExp("\\d+");
+    console.log(texto.match(literal)[0]);
+    console.log(texto.match(constructor)[0]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 47</title>
+</head>
+<body>
+  <h1>Diferencia entre `match` global y no global</h1>
+  <p>Llama a match una vez con una regex sin g y otra con g. Muestra ambos resultados y compara qué información contiene cada uno.</p>
+  <script>
+    const texto = "a1b22";
+    console.log(texto.match(/(\d+)/));
+    console.log(texto.match(/\d+/g));
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 30</title>
+</head>
+<body>
+  <h1>Referencia a un grupo con nombre</h1>
+  <p>Comprueba si hay una letra seguida por la misma letra, ignorando mayúsculas.</p>
+  <script>
+    const texto = "Abba";
+    console.log(/(?<l>[a-z])\k<l>/i.test(texto));
+  </script>
+</body>
+</html>

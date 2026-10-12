@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio regex 59</title>
+</head>
+<body>
+  <h1>Validación simple de email</h1>
+  <p>Construye una validación de cadena completa para un email sencillo con texto antes y después de @ y un punto en el dominio. No intentes validar todos los casos permitidos por los estándares de email.</p>
+  <script>
+    const email = "ana@mail.com";
+    console.log(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
+  </script>
+</body>
+</html>
